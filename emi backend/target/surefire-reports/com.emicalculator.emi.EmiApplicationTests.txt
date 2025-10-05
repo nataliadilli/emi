@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.emicalculator.emi.EmiApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.691 s -- in com.emicalculator.emi.EmiApplicationTests
