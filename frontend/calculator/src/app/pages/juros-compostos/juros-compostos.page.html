@@ -1,0 +1,74 @@
+<ion-header style="--min-height: 54px;">
+  <ion-toolbar style="--background: #236190;--color: #fff; --min-height: 54px;">
+    <ion-buttons slot="start">
+      <ion-back-button style="--color: #fff"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="calculator-container">
+    <div class="content-page">
+
+      <div class="title">Emi calculator</div>
+
+    </div>
+
+    <div class="title-page">Simulador de Juros Compostos</div>
+
+    <div class="form-container">
+      <div class="input-group">
+        <label>Valor inicial</label>
+        <div class="input-wrapper">
+          <span class="currency">R$</span>
+          <ion-input type="text" placeholder="00,00" [(ngModel)]="valorInicial" class="currency-input">
+          </ion-input>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Valor Mensal</label>
+        <div class="input-wrapper">
+          <span class="currency">R$</span>
+          <ion-input type="text" placeholder="00,00" [(ngModel)]="valorMensal" class="currency-input">
+          </ion-input>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Taxa de juros</label>
+        <div class="input-wrapper">
+          <span class="currency">%</span>
+          <ion-input type="text" placeholder="00,00" [(ngModel)]="taxaJuros" class="currency-input">
+          </ion-input>
+          <ion-select [(ngModel)]="periodoTaxa" class="period-select" slot="end">
+            <ion-select-option value="1">Mensal</ion-select-option>
+            <ion-select-option value="2">Anual</ion-select-option>
+          </ion-select>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Período</label>
+        <div class="input-wrapper">
+          <ion-input type="number" value="12" [(ngModel)]="periodo" class="period-input">
+          </ion-input>
+          <ion-select [(ngModel)]="unidadePeriodo" class="period-select" slot="end">
+            <ion-select-option value="1">Meses</ion-select-option>
+            <ion-select-option value="2">Anos (s)</ion-select-option>
+          </ion-select>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <ion-button fill="outline" class="clear-button" (click)="limparFormulario()">
+          Limpar
+        </ion-button>
+        <ion-button class="calculate-button" (click)="calcularJurosCompostos()">
+          Calcular
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

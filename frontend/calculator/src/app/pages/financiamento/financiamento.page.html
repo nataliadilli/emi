@@ -1,0 +1,72 @@
+<ion-header style="--min-height: 54px;">
+  <ion-toolbar style="--background: #236190;--color: #fff; --min-height: 54px;">
+    <ion-buttons slot="start">
+      <ion-back-button style="--color: #fff"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="calculator-container">
+
+    <div class="content-page">
+
+      <div class="title">Emi calculator</div>
+
+    </div>
+
+    <div class="title-page">Simulador de Financiamento</div>
+
+    <div class="form-container">
+      <div class="input-group">
+        <label>Valor do imóvel</label>
+        <div class="input-wrapper">
+          <span class="currency">R$</span>
+          <ion-input type="text" placeholder="00,00" [(ngModel)]="valorImovel" class="currency-input">
+          </ion-input>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Entrada</label>
+        <div class="input-wrapper">
+          <span class="currency">R$</span>
+          <ion-input type="text" placeholder="00,00" [(ngModel)]="entrada" class="currency-input">
+          </ion-input>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Taxa de juros</label>
+        <div class="input-wrapper">
+          <span class="currency">%</span>
+          <ion-input type="text" placeholder="00,00" [(ngModel)]="taxaJuros" class="currency-input">
+          </ion-input>
+          <ion-select [(ngModel)]="periodoTaxa" class="period-select" slot="end">
+            <ion-select-option value="1">Mensal</ion-select-option>
+            <ion-select-option value="2">Anual</ion-select-option>
+          </ion-select>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Prazo</label>
+        <div class="input-wrapper">
+          <ion-input type="number" value="0" [(ngModel)]="prazo" class="period-input">
+          </ion-input>
+          <span class="period-label">Meses</span>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <ion-button fill="outline" class="clear-button" (click)="limparFormulario()">
+          Limpar
+        </ion-button>
+        <ion-button class="calculate-button" (click)="calcularFinanciamento()">
+          Calcular
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

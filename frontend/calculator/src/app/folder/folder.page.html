@@ -1,0 +1,50 @@
+<ion-header class="header">
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="content-page">
+
+    <div class="title">Emi calculator</div>
+
+  </div>
+
+  <div class="content-items">
+
+    <div class="item" (click)="abrirPrograma('juros-simples')">
+      <img src="assets/juro simples 1.png" alt="">
+
+      <div class="title-item">Juros Simples</div>
+    </div>
+
+    <div class="item" (click)="abrirPrograma('juros-compostos')">
+      <img src="assets/juro composto 1.png" alt="">
+
+      <div class="title-item">Juros Compostos</div>
+    </div>
+
+  </div>
+
+  <div class="content-items">
+
+    <div class="item" (click)="abrirPrograma('aposentadoria')">
+      <img src="assets/juro simples 1.png" alt="">
+
+      <div class="title-item">Simulador aposentadoria</div>
+    </div>
+
+    <div class="item" (click)="abrirPrograma('financiamento')">
+      <img src="assets/juro composto 1.png" alt="">
+
+      <div class="title-item">Alugar vs financiar</div>
+    </div>
+
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #236190;--color: #fff; --min-height: 54px;">
+
+  </ion-toolbar>
+</ion-footer>

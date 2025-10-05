@@ -1,0 +1,195 @@
+.content-page {
+
+    display: flex;
+    justify-content: center;
+    background-color: #F2F2F2;
+    height: 96px;
+    border-radius: 20px;
+    margin: 20px 22px 0 22px;
+
+    .title {
+        color: #236190;
+        font-weight: bold;
+        font-size: 30px;
+        text-decoration: underline;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+.form-items {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.title-page {
+    font-size: 30px;
+    color: #236190;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    word-break: break-word;
+    margin-bottom: 30px;
+}
+
+.prefix {
+    background: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+}
+
+ion-input {
+    --highlight-color: none !important;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 31px;
+}
+
+.botao-secundario {
+    width: 105px;
+}
+
+.botao-primario {
+    width: 192px;
+}
+
+ion-item ion-input {
+    flex: 1;
+}
+
+ion-item ion-select {
+    max-width: 120px; // controla o tamanho do select à direita
+}
+
+.prefix {
+    padding: 0 8px;
+    font-weight: 500;
+}
+
+.calculator-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.header-section {
+    background-color: #236190;
+    border-radius: 15px 15px 0 0;
+    padding: 20px;
+    text-align: center;
+
+    .title {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-decoration: underline;
+    }
+
+    .subtitle {
+        background-color: #e9ecef;
+        color: #236190;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: underline;
+        display: inline-block;
+    }
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 20px;
+
+    label {
+        display: block;
+        color: #333;
+        font-weight: 500;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    .input-wrapper {
+        display: flex;
+        align-items: center;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 12px;
+
+        .currency {
+            color: #6c757d;
+            font-weight: 500;
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+        .currency-input {
+            flex: 1;
+            --background: transparent;
+            --color: #495057;
+            --placeholder-color: #6c757d;
+            font-size: 16px;
+        }
+
+        .period-input {
+            flex: 1;
+            --background: transparent;
+            --color: #495057;
+            font-size: 16px;
+        }
+
+        .period-select {
+            margin-left: 10px;
+            --background: transparent;
+            --color: #495057;
+            font-size: 14px;
+            min-width: 80px;
+        }
+    }
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 15px;
+
+    .clear-button {
+        flex: 1;
+        --background: #f8f9fa;
+        --color: #236190;
+        --border-color: #dee2e6;
+        --border-radius: 8px;
+        font-weight: 500;
+        height: 45px;
+    }
+
+    .calculate-button {
+        flex: 1;
+        --background: #236190;
+        --color: white;
+        --border-radius: 8px;
+        font-weight: 500;
+        height: 45px;
+    }
+}

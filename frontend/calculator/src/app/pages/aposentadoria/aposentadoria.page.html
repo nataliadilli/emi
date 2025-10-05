@@ -1,0 +1,108 @@
+<ion-header style="--min-height: 54px;">
+  <ion-toolbar style="--background: #236190;--color: #fff; --min-height: 54px;">
+    <ion-buttons slot="start">
+      <ion-back-button style="--color: #fff"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="calculator-container">
+
+    <div class="content-page">
+
+      <div class="title">Emi calculator</div>
+
+    </div>
+
+    <div class="title-page">Simulador de Aposentadoria</div>
+
+    <div class="form-container">
+      <div class="form-grid">
+        <div class="column">
+          <div class="input-group">
+            <label>Quanto você ganha por mês?</label>
+            <div class="input-wrapper">
+              <span class="currency">R$</span>
+              <ion-input type="text" value="5.000,00" [(ngModel)]="rendaMensal" class="currency-input">
+              </ion-input>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Com quanto de patrimônio você quer se aposentar?</label>
+            <div class="input-wrapper">
+              <span class="currency">R$</span>
+              <ion-input type="text" value="1.000.000,00" [(ngModel)]="patrimonioDesejado" class="currency-input">
+              </ion-input>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Qual a sua idade atual?</label>
+            <div class="input-wrapper">
+              <ion-input type="number" placeholder="25" [(ngModel)]="idadeAtual" class="number-input">
+              </ion-input>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Sua rentabilidade total anual projetada</label>
+            <div class="input-wrapper">
+              <span class="currency">%</span>
+              <ion-input type="text" placeholder="00,00" [(ngModel)]="rentabilidadeAnual" class="currency-input">
+              </ion-input>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input-group">
+            <label>Quanto você já tem investido?</label>
+            <div class="input-wrapper">
+              <span class="currency">R$</span>
+              <ion-input type="text" placeholder="00,00" [(ngModel)]="valorInvestido" class="currency-input">
+              </ion-input>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Quantos % da sua renda você investe?</label>
+            <div class="input-wrapper">
+              <span class="currency">%</span>
+              <ion-input type="text" value="20" [(ngModel)]="percentualInvestimento" class="currency-input">
+              </ion-input>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Com quantos anos você deseja se aposentar?</label>
+            <div class="input-wrapper">
+              <ion-input type="number" placeholder="65" [(ngModel)]="idadeAposentadoria" class="number-input">
+              </ion-input>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Quanto você pretende gastar por mês aposentado?</label>
+            <div class="input-wrapper">
+              <span class="currency">R$</span>
+              <ion-input type="text" placeholder="00,00" [(ngModel)]="gastoMensalAposentadoria" class="currency-input">
+              </ion-input>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <ion-button fill="outline" class="clear-button" (click)="limparFormulario()">
+          Limpar
+        </ion-button>
+        <ion-button class="calculate-button" (click)="calcularAposentadoria()">
+          Calcular
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
